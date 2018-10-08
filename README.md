@@ -20,4 +20,5 @@ Coming soon !
 ## Authors
 
 Gautier Vaillant
+
 Vincent Desombre
