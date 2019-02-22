@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TradeFriendlyFooter from './Footer';
+import {TradeFriendlyFooter} from './Footer';
 import {TradeFriendlyHeader} from './Header'
 
 class App extends Component {

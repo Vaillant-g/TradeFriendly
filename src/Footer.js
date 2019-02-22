@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-class TradeFriendlyFooter extends Component {
-    render() {
+export function TradeFriendlyFooter() {
         return(
             <footer>
                 <p>
@@ -9,7 +8,4 @@ class TradeFriendlyFooter extends Component {
                 </p>
             </footer>
         )
-    }
 }
-
-export default TradeFriendlyFooter;
