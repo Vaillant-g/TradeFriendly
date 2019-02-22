@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: #ffdafb;
+  background-color: #2B3A42;
   min-height: 6vh;
   display: flex;
   flex-direction: column;
@@ -22,9 +22,13 @@
 }
 
 .App-footer {
-  background-color: #282c34;
+  background-color: #2B3A42;
   min-height: 6vh;
   color: white;
+}
+
+body {
+  background-color: #3F5765;
 }
 
 @keyframes App-logo-spin {
