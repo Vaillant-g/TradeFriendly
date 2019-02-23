@@ -2,26 +2,17 @@
 
 # dependencies
 /TradeFriendlyClient/node_modules
-/TradeFriendlyServ/node_modules
-/TradeFriendlyServ/.pnp
-/TradeFriendlyServ/.pnp.js
 /TradeFriendlyClient/.pnp
 /TradeFriendlyClient/.pnp.js
 
 # testing
 /TradeFriendlyClient/coverage
-/TradeFriendlyServ/coverage
 
 # production
 /TradeFriendlyClient/build
 /TradeFriendlyServ/build
 
 # misc
-/TradeFriendlyServ/.DS_Store
-/TradeFriendlyServ/.env.local
-/TradeFriendlyServ/.env.development.local
-/TradeFriendlyServ/.env.test.local
-/TradeFriendlys/.env.production.local
 /TradeFriendlyClient/.DS_Store
 /TradeFriendlyClient/.env.local
 /TradeFriendlyClient/.env.development.local
@@ -31,6 +22,3 @@
 /TradeFriendlyClient/npm-debug.log*
 /TradeFriendlyClient/yarn-debug.log*
 /TradeFriendlyClient/yarn-error.log*
-/TradeFriendlyServ/npm-debug.log*
-/TradeFriendlyServ/yarn-debug.log*
-/TradeFriendlyServ/yarn-error.log*
