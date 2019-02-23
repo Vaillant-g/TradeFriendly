@@ -1,0 +1,32 @@
+.App-logo {
+  height: 8vmin;
+  pointer-events: none;
+  width: 7%;
+  text-align: left;
+}
+
+.App-header {
+  background-color: #2B3A42;
+}
+
+.App-Content {
+  min-height: 83vh;
+  text-align: center;
+}
+
+.App-footer {
+  background-color: #2B3A42;
+  height: 8.6vh;
+  color: white;
+
+}
+
+.App-copyright {
+  height: 4vmin;
+  margin-top: 1%;
+}
+
+body {
+  background-color: #3F5765;
+}
+
