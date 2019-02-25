@@ -4,6 +4,7 @@
 /TradeFriendlyClient/node_modules
 /TradeFriendlyClient/.pnp
 /TradeFriendlyClient/.pnp.js
+/TradeFriendlyServ/node_modules
 
 # testing
 /TradeFriendlyClient/coverage
