@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './Tradly.png'
+import logo from './Logo.png'
 
 export function TradeFriendlyHeader() {
         return (

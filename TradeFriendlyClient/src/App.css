@@ -1,5 +1,5 @@
 .App-logo {
-  height: 8vmin;
+  /*1height: 8vh; */
   pointer-events: none;
   width: 7%;
   text-align: left;
@@ -16,8 +16,11 @@
 
 .App-footer {
   background-color: #2B3A42;
-  height: 8.6vh;
+  /*height: 8.6vh;*/
   color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 
 }
 

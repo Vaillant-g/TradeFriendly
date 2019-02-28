@@ -1,7 +1,7 @@
 {
-  "name": "TradeFriendlyServ",
+  "name": "tradefriendlyserv",
   "version": "1.0.0",
-  "description": "",
+  "description": "serv",
   "main": "TfApp.js",
   "dependencies": {
     "express": "^4.16.4",
