@@ -7,7 +7,8 @@
     "express": "^4.16.4",
     "koa": "^2.7.0",
     "koa-ejs": "^4.2.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {
