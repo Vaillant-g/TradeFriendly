@@ -11,8 +11,14 @@
     "koa-ejs": "^4.2.0",
     "koa-router": "^7.4.0",
     "openid-client": "^2.4.5",
+    "passport": "^0.4.0",
+    "passport-steam": "^1.0.10",
     "request": "^2.88.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "steam-community": "^0.2.2",
+    "steam-login": "^0.1.7",
+    "steam-user-inventory": "^4.2.0",
+    "web-api-steam": "^1.0.8"
   },
   "devDependencies": {},
   "scripts": {
