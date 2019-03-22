@@ -12,7 +12,5 @@ export function TradeFriendlyFooter() {
                 </p>
             </Container>
         </footer>
-
-
     );
-}
+}   

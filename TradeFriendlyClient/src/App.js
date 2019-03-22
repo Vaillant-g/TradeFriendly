@@ -3,8 +3,11 @@ import socketIOClient from "socket.io-client";
 import './App.css';
 import { TradeFriendlyFooter } from './Footer';
 import { TradeFriendlyHeader } from './Header'
-import { TradeFriendlySearchBar } from './SearchBar'
-import { AccueilMessage } from './AccueilMessage'
+import { AboutUs } from './AboutUs'
+import { Home } from './Home'
+import { RecentSearches } from './RecentSearches'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 
 class App extends Component {
@@ -33,11 +36,14 @@ class App extends Component {
     const response = this.state;
     return (
       <div className="App">
-        <TradeFriendlyHeader test={this.sock} />
-        <div className="App-Content">
-          <AccueilMessage/>
-          <TradeFriendlySearchBar />
-        </div>
+        <Router>
+          <div>
+            <TradeFriendlyHeader test={this.sock} />
+            <Route exact path="/" component={Home} />
+            <Route path="/RecentSearches" component={RecentSearches} />
+            <Route path="/AboutUs" component={AboutUs} />
+          </div>
+        </Router>
         <TradeFriendlyFooter />
       </div>
     );
