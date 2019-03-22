@@ -45,3 +45,20 @@ body {
   max-width: 200px;
 }
 
+/* BODY */
+
+/* MESSAGE ACCUEIL */
+
+.jumbotron {
+  background: none;
+}
+.AccueilImage {
+  max-width: 400px;
+}
+
+.AccueilAnnonce {
+  color: #FFFF;
+}
+.ImportantWord {
+  color: #ffcb3f;
+}

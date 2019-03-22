@@ -9,18 +9,20 @@ export function TradeFriendlySearchBar() {
     return (
 
         <Container>
-            <Row>
-                <Col md={{ span: 6, offset: 3 }}>
-                    <Form >
-                        <Form.Group controlId="exampleForm.ControlInput1">
-                            {/* <Form.Label>Email address</Form.Label> */}
-                            <Form.Control type="email" placeholder="ex: Karambit | Fade (Factory New)" />
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Submit
-              </Button>
-                    </Form>
+            <Row noGutters>
+                {/* <Form> */}
+                <Col md={{ span: 9 }}>
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                        <Form.Control type="" placeholder="ex: Karambit | Fade (Factory New)" />
+                    </Form.Group>
                 </Col>
+                <Col md={{ span: 3 }}>
+                    <Button variant="primary" type="submit">
+                        Submit
+                            </Button>
+                </Col>
+                {/* </Form> */}
+
             </Row>
         </Container>
 

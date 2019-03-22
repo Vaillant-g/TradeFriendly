@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import socketIOClient from "socket.io-client";
 import './App.css';
-import {TradeFriendlyFooter} from './Footer';
-import {TradeFriendlyHeader} from './Header'
-import {TradeFriendlySearchBar} from './SearchBar'
+import { TradeFriendlyFooter } from './Footer';
+import { TradeFriendlyHeader } from './Header'
+import { TradeFriendlySearchBar } from './SearchBar'
+import { AccueilMessage } from './AccueilMessage'
 
 
 class App extends Component {
@@ -15,10 +16,10 @@ class App extends Component {
     };
     this.sock = false;
 
-    
+
     const { endpoint } = this.state;
     const socket = socketIOClient(endpoint);
-    this.sock = socket; 
+    this.sock = socket;
 
   }
 
@@ -34,6 +35,7 @@ class App extends Component {
       <div className="App">
         <TradeFriendlyHeader test={this.sock} />
         <div className="App-Content">
+          <AccueilMessage/>
           <TradeFriendlySearchBar />
         </div>
         <TradeFriendlyFooter />
