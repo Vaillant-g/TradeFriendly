@@ -27,6 +27,7 @@
 .SteamCoButton {
   float: right;
   margin-right: 1%;
+  /* background-color: #2B3A42; */
 }
 
 .App-copyright {
@@ -36,5 +37,11 @@
 
 body {
   background-color: #3F5765;
+}
+
+/* HEADER */
+
+.NavbarImage {
+  max-width: 200px;
 }
 
