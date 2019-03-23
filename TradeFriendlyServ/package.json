@@ -10,6 +10,7 @@
     "koa": "^2.7.0",
     "koa-ejs": "^4.2.0",
     "koa-router": "^7.4.0",
+    "mysql": "^2.16.0",
     "openid-client": "^2.4.5",
     "passport": "^0.4.0",
     "passport-steam": "^1.0.10",

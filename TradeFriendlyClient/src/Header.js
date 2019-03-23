@@ -17,6 +17,9 @@ function ShowAlert(data) {
     console.log(data.test);
     //const socket = socketIOClient("http://127.0.0.1:4001");
     data.test.emit('steamCo', "Victime");
+    data.test.on('Return data', function(data) {
+        console.log(data);
+    });
 }
 
 const ImgStyle = {
