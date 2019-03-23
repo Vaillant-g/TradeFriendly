@@ -3,11 +3,11 @@ import { TradeFriendlySearchBar } from './SearchBar'
 import { AccueilMessage } from './AccueilMessage'
 
 
-export function Home() {
+export function Home(data) {
     return (
         <div className="App-Content">
             <AccueilMessage />
-            <TradeFriendlySearchBar />
+            <TradeFriendlySearchBar test={data.test} />
         </div>
     );
 }

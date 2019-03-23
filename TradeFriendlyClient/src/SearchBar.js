@@ -5,7 +5,15 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 
-export function TradeFriendlySearchBar() {
+function SendSerchedItem(data) {
+    console.log(data.test);
+    data.test.emit('WeaponSearched', "Arme envoyé");
+    data.test.on('FriendsWithWeapon', function(data) {
+        console.log(data);
+    });
+}
+
+export function TradeFriendlySearchBar(data) {
     return (
 
         <Container>
@@ -17,7 +25,7 @@ export function TradeFriendlySearchBar() {
                     </Form.Group>
                 </Col>
                 <Col md={{ span: 3 }}>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" onClick={() => SendSerchedItem(data)}>
                         Submit
                             </Button>
                 </Col>

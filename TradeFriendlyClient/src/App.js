@@ -39,7 +39,7 @@ class App extends Component {
         <Router>
           <div>
             <TradeFriendlyHeader test={this.sock} />
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={() => <Home test={this.sock}/>}/>
             <Route path="/RecentSearches" component={RecentSearches} />
             <Route path="/AboutUs" component={AboutUs} />
           </div>
