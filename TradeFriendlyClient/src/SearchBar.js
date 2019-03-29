@@ -6,7 +6,6 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 
 function SendSerchedItem(data, ToFind) {
-    const form = document.getElementById("SasukeEstDARK");
     console.log(data.test);
     console.log(ToFind);
     data.test.emit('WeaponSearched', "Arme envoyé");
@@ -25,11 +24,9 @@ export function TradeFriendlySearchBar(data) {
             <Row noGutters>
                 {/* <Form> */}
                 <Col md={{ span: 9 }}>
-                <Form>
                     <Form.Group controlId="exampleForm.ControlInput1">
                         <Form.Control type="" placeholder="ex: Karambit | Fade (Factory New)" value={ToFind}/>
                     </Form.Group>
-                    </Form>
                 </Col>
                 <Col md={{ span: 3 }}>
                     <Button variant="primary" type="submit" onClick={() => SendSerchedItem(data, ToFind)}>

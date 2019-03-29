@@ -43,11 +43,6 @@ connection.query('SELECT * from skin where id = 1', function (error, results, fi
         
     //});
 
-    /*steamUserInventory('hiepbinh', "730/2/").then(data => {
-        data.forEach(function(entry) {
-         console.log(entry.name);
-        });
-    });*/
 
 
     console.log(msg);
@@ -57,6 +52,12 @@ connection.query('SELECT * from skin where id = 1', function (error, results, fi
   //Fonction de recherche d'arme
   function ReceivedWeapon(msg, socket) {
     console.log(msg);
+    
+    steamUserInventory('hiepbinh', "730/2/").then(data => {
+        data.forEach(function(entry) {
+         console.log(entry.name);
+        });
+    });
     socket.emit('FriendsWithWeapon', 'Resultat de la recherche');
 
   }
