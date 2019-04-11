@@ -7,33 +7,32 @@ import Col from 'react-bootstrap/Col';
 
 function SendSerchedItem(data, ToFind) {
     console.log(data.test);
-    console.log(ToFind);
-    data.test.emit('WeaponSearched', "Arme envoyé");
-    data.test.on('FriendsWithWeapon', function(data) {
-        console.log(data);
-    });
+    console.log("to find : " + ToFind.current.value);
+    console.log("testFN");
+    data.test.emit('WeaponSearched', ToFind.current.value);
 }
 
 
 export function TradeFriendlySearchBar(data) {
-    var ToFind;
+    var ToFind = React.createRef();
+    data.test.on('FriendsWithWeapon', function(data) {
+        console.log("OAKAKAKAK");
+    });
     return (
 
         <Container>
         <form>
             <Row noGutters>
-                {/* <Form> */}
                 <Col md={{ span: 9 }}>
                     <Form.Group controlId="exampleForm.ControlInput1">
-                        <Form.Control type="" placeholder="ex: Karambit | Fade (Factory New)" value={ToFind}/>
+                        <Form.Control type="" placeholder="ex: Karambit | Fade (Factory New)" ref={ToFind}/>
                     </Form.Group>
                 </Col>
                 <Col md={{ span: 3 }}>
                     <Button variant="primary" type="submit" onClick={() => SendSerchedItem(data, ToFind)}>
                         Submit
-                            </Button>
+                    </Button>
                 </Col>
-                {/* </Form> */}
             </Row>
                 </form>
         </Container>

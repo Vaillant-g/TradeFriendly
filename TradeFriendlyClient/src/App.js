@@ -9,7 +9,6 @@ import { RecentSearches } from './RecentSearches'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,14 +25,10 @@ class App extends Component {
 
   }
 
-  // componentWillMount = () => {
-  //   const { endpoint } = this.state;
-  //   const socket = socketIOClient(endpoint);
-  //   this.sock = socket; 
-  //}
 
   render() {
     const response = this.state;
+    console.log("Global : " + global.test);
     return (
       <div className="App">
         <Router>

@@ -3,7 +3,7 @@ const http = require("http");
 const socketIo = require("socket.io");
 const request = require('request');
 const passport = require('passport');
-const steamUserInventory = require('steam-user-inventory');
+const steamUserInventory = require('get-steam-inventory');
 const steamfriends = require('web-api-steam');
 
 
@@ -51,14 +51,22 @@ connection.query('SELECT * from skin where id = 1', function (error, results, fi
 
   //Fonction de recherche d'arme
   function ReceivedWeapon(msg, socket) {
-    console.log(msg);
+    console.log("received : " + msg);
+    //if (msg.startsWith("he"))
+    var arr = [];
     
-    steamUserInventory('hiepbinh', "730/2/").then(data => {
-        data.forEach(function(entry) {
-         console.log(entry.name);
-        });
-    });
-    socket.emit('FriendsWithWeapon', 'Resultat de la recherche');
+      
+    steamUserInventory.getinventory(730, "76561198072811191", function(err, data) {
+      data.marketnames.forEach(function(entry) {
+      if (entry.startsWith(msg)) {
+    //    console.log(entry);
+        arr.push(entry);
+      }
+      });
+      console.log(arr);
+      socket.emit('FriendsWithWeapon', arr);
+    }, 2);
+
 
   }
 
