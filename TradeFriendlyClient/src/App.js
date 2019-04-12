@@ -28,7 +28,6 @@ class App extends Component {
 
   render() {
     const response = this.state;
-    console.log("Global : " + global.test);
     return (
       <div className="App">
         <Router>
@@ -42,6 +41,12 @@ class App extends Component {
         <TradeFriendlyFooter />
       </div>
     );
+  }
+}
+
+const mapStateToStore = store => {
+  return {
+
   }
 }
 

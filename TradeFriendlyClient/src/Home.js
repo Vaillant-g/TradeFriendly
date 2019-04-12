@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TradeFriendlySearchBar } from './SearchBar'
+import TradeFriendlySearchBar  from './SearchBar'
 import { AccueilMessage } from './AccueilMessage'
 
 
