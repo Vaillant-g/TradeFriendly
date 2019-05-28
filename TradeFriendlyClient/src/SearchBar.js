@@ -24,7 +24,11 @@ class TradeFriendlySearchBar extends Component {
      SendSerchedItem(event, data, ToFind) {
         event.preventDefault();
         console.log("to find : " + ToFind.current.value);
-        this.props.test.emit('WeaponSearched', ToFind.current.value);
+
+        if (localStorage.getItem("login"))
+        var toFind2 = [ToFind.current.value, localStorage.getItem("login")];
+        console.log("toFind2 : " + toFind2[1]);
+        this.props.test.emit('WeaponSearched', toFind2);
         console.log(this.state.data);
         /*this.props.test.on('FriendsWithWeapon', function(data) {
             console.log(data);
@@ -61,7 +65,8 @@ class TradeFriendlySearchBar extends Component {
     GetLocalData() {
             if (localStorage.hasOwnProperty("Data")) {
                 let value = localStorage.getItem("Data");
-                console.log("Data from storage" + value);
+                console.log("Data from storage " + value);
+                console.log("Login from storage " + localStorage.getItem("login"));
 
                 try {
                   value = JSON.parse(value);
@@ -77,7 +82,7 @@ class TradeFriendlySearchBar extends Component {
         console.log("data : " + this.state.data);
         if (this.state.res === 0)
             this.GetResult(this.props.test);
-        setInterval(this.timer.bind(this), 1000);
+        setInterval(this.timer.bind(this), 3000);
     }
 
     render() {
