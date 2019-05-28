@@ -12,7 +12,7 @@ import Image from 'react-bootstrap/Image';
 export function AccueilMessage() {
     return (
         <Container>
-            <Jumbotron>
+            <Jumbotron id="MessageAccueil">
                 <Row>
                     <Col md={{span: 9}}>
                     <h1 className="AccueilAnnonce">

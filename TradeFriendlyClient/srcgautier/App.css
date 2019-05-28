@@ -37,6 +37,11 @@
 
 body {
   background-color: #3F5765;
+  background-image: url("background2.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed;
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 /* HEADER */
@@ -49,9 +54,10 @@ body {
 
 /* MESSAGE ACCUEIL */
 
-.jumbotron {
+#MessageAccueil {
   background: none;
 }
+
 .AccueilImage {
   max-width: 400px;
 }
@@ -61,4 +67,39 @@ body {
 }
 .ImportantWord {
   color: #ffcb3f;
+}
+
+/* resultats*/
+
+#TitreResultats
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #F8F9F9;
+}
+
+ul {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
+
+.resultImage {
+width: 200px;
+}
+
+.resultItems {
+  text-align: left;
+  margin-bottom: 10%;
+  padding-top: 4%;
+  border-radius: 25px;
+  background: #7D95A4;
+
+
+}
+
+#LoginArea {
+  width: 100%;
+  margin-top: 50px;
 }
