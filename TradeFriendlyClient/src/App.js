@@ -5,8 +5,11 @@ import { TradeFriendlyFooter } from './Footer';
 import { TradeFriendlyHeader } from './Header'
 import { AboutUs } from './AboutUs'
 import { Home } from './Home'
+import  Signin  from './Signin'
+import  Login  from './Login'
 import { RecentSearches } from './RecentSearches'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 
 class App extends Component {
@@ -36,6 +39,8 @@ class App extends Component {
             <Route exact path="/" component={() => <Home test={this.sock}/>}/>
             <Route path="/RecentSearches" component={RecentSearches} />
             <Route path="/AboutUs" component={AboutUs} />
+            <Route path="/Signin" component={() => <Signin test={this.sock}/>} />
+            <Route path="/Login" component={() => <Login test={this.sock}/>} />
           </div>
         </Router>
         <TradeFriendlyFooter />
