@@ -57,23 +57,32 @@ connection.query('SELECT * from users where id = 1', function (error, results, f
     console.log("received : " + msg[0].toString());
     //if (msg.startsWith("he"))
     var arr = [];
+    var test;
     var i = 0;
     
     steamfriends.getFriendList(msg[1], "3F95133360C48472452698ACF9529A0F", (err, data) => {
       
 //76561198072811191
-console.log(data[4]);
       steamUserInventory.getinventory(730, data[i].steamid, function(err, data2) {
         if (data2 && data2.marketnames) {
         data2.marketnames.forEach(function(entry) {
         if (entry.toLowerCase().startsWith(msg[0])) {
-          arr.push(data[i].steamid);
+          steamfriends.getPlayerInfo(data[i].steamid, "3F95133360C48472452698ACF9529A0F", (err, data3) => {
+            test = data3;
+            console.log(data3.personaname);
+            arr.push([data[i].steamid, data3.personaname]);
+          });
+          
+          console.log(test);
+          console.log(entry);
         }
         i++;
       }, 2);
     }
+    setTimeout((() => {
     console.log("ARRAY : " + arr);
     socket.emit('FriendsWithWeapon', arr);
+    }), 500);
     });
 
 

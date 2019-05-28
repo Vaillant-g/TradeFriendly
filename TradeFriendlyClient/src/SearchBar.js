@@ -25,7 +25,7 @@ class TradeFriendlySearchBar extends Component {
     SendSerchedItem(event, data, ToFind) {
         event.preventDefault();
         console.log("to find : " + ToFind.current.value);
-
+        localStorage.setItem("search", ToFind.current.value);
         if (localStorage.getItem("login"))
             var toFind2 = [ToFind.current.value, localStorage.getItem("login")];
         console.log("toFind2 : " + toFind2[1]);

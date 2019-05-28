@@ -95,7 +95,7 @@ class Login extends Component {
           </div>
         </div>
         <div class="row">
-          {signLog == 1 && (
+          {signLog != 2 && (
             <Jumbotron id="LoginArea">
               <form onSubmit={this.handleSubmitLog}>
               <div class="form-group">

@@ -20,21 +20,34 @@ const friendlist = ["76561197962769663", "76561197968161687", "76561197972860399
 
 const elements2 = [item1, item3, item3];
 
-const SearchInput = "{requested item}"
+const SearchInput = localStorage.getItem("search");
 
 
 export function Results(data) {
 
 
-
   if (data == 1)
     return ("");
+    //var i = -1;
+  console.log(JSON.stringify(data.props).split(',')[0]);
+  var tmp;
   return (
     <div>
-      <h1 id="TitreResultats"> <span class="ImportantWord">{friendlist.length}</span> Search results for <span className="ImportantWord">{SearchInput}</span></h1>
+      <h1 id="TitreResultats"> <span class="ImportantWord">{data.props.length}</span> Search results for <span className="ImportantWord">{SearchInput}</span></h1>
       <ul>
         {
-          friendlist.map((id64) => {
+          JSON.stringify(data.props).split(',').map((id64, i) => {
+            i--;
+            console.log("i : " + i + " value : " + id64);
+            i++;
+            if (i % 2 == 0) {
+            id64 = (id64[0] == '[' && id64[1] == '[' ? id64.substr(3, id64.length - 4) : 
+            id64[0] == '[' && id64[1] == '"' ? id64.substr(2, id64.length - 3) : id64.substr(1, id64.length - 2));
+            tmp = id64;
+            }
+            else {
+            id64 = (id64[0] == '[' && id64[1] == '"' ? id64.substr(1, id64.length - 10) : 
+            id64[0] == '"' && id64[id64.length - 1] == ']' ? id64.substr(1, id64.length - 3) : id64.substr(1, id64.length - 2));
             return (
               <div class="container">
                 <div class="row">
@@ -46,13 +59,15 @@ export function Results(data) {
                         </div>
                         <div class="col-md-8">
                           <div>
-                            <h4><span className="ImportantWord">NameOfFriend</span> 's {SearchInput}</h4><br />
+                            <h4><span className="ImportantWord">{id64}</span> 's {SearchInput}</h4><br />
                             <p>Float value : </p>
 
                             <button type="button" class="btn btn-outline-light">Inspect in game</button>
-                            <a target="_blank" href={'"http://steamcommunity.com/profiles/' + { id64 }.id64 + '"'}>
-                              <button class="btn btn-outline-light float-right">Steam profile of <span className="ImportantWord">NameOfFriend</span></button>
+                            {
+                            <a target="_blank" href={'http://www.steamcommunity.com/profiles/' + tmp}>
+                              <button class="btn btn-outline-light float-right">Steam profile of <span className="ImportantWord">{id64}</span></button>
                             </a>
+                            }
                           </div>
                         </div>
                       </div>
@@ -61,6 +76,7 @@ export function Results(data) {
                 </div>
               </div>
             )
+          }
           })
         }
       </ul>
