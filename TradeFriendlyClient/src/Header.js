@@ -17,7 +17,7 @@ function ShowAlert(data) {
     console.log(data.test);
     //const socket = socketIOClient("http://127.0.0.1:4001");
     data.test.emit('steamCo', "Connexion");
-    data.test.on('Return data', function(data) {
+    data.test.on('Return data', function (data) {
         console.log(data);
     });
 }
@@ -27,27 +27,35 @@ const ImgStyle = {
 };
 
 export function TradeFriendlyHeader(data) {
+
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <NavLink to="/"><Image src={logo} className="NavbarImage" name="logo" alt="logo" /></NavLink>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
-                </Nav>
                 <Nav>
-                <Nav.Link><NavLink className="SteamCoButton" to="Login">Login</NavLink></Nav.Link>
+
+                </Nav>
+            </Navbar.Collapse>
+
+            <a class="SteamCoButton" variant="outline-light" href="/Login">
+            <button type="button" class="btn btn-light">Login</button></a>
+            {/* <NavLink variant="outline-light" className="SteamCoButton" to="Login">Login</NavLink> */}
+        </Navbar>
+    );
+
+    return (
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <NavLink to="/"><Image src={logo} className="NavbarImage" name="logo" alt="logo" /></NavLink>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav>
+                    <Nav.Link><NavLink className="SteamCoButton" to="Login">Login</NavLink></Nav.Link>
 
                     {/* <Nav.Link href="#deets">More deets</Nav.Link>
                     <Nav.Link eventKey={2} href="#memes">Dank memes</Nav.Link> */}
 
-                    <Button variant="outline-light" className="SteamCoButton" onClick={() => ShowAlert(data)}>
+                    <Button variant="outline-light" className="SteamCoButton float-right" onClick={() => ShowAlert(data)}>
                         <img style={ImgStyle} src={SteamCo} ></img>
                         Connection</Button>
                     {/* <button className="SteamCoButton" onClick={() => ShowAlert(data)}>

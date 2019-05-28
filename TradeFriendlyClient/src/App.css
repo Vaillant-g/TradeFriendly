@@ -89,15 +89,15 @@ ul {
 }
 
 .resultImage {
-width: 200px;
+width: 150px;
 }
 
 .resultItems {
   text-align: left;
-  margin-bottom: 10%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-  border-radius: 25px;
+  margin-bottom: 4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
   background: #7D95A4;
   width: 100%;
 

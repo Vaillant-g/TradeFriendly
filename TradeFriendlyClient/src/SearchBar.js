@@ -98,7 +98,7 @@ class TradeFriendlySearchBar extends Component {
                         </Col>
                         <Col md={{ span: 3 }}>
                             <Button variant="primary" type="submit" >
-                                Submit
+                                Search in your friends' inventories
                     </Button>
                         </Col>
                     </Row>
