@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import socketIOClient from "socket.io-client";
 import './App.css';
-import { TradeFriendlyFooter } from '../src/Footer';
+import { TradeFriendlyFooter } from './Footer';
 import { TradeFriendlyHeader } from './Header'
 import { AboutUs } from '../src/AboutUs'
 import { Home } from './Home'

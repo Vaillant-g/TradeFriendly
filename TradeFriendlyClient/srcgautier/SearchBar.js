@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Results } from './Results'
+import { Results } from '../src/Results'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';

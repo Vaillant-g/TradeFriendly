@@ -33,8 +33,6 @@ export function TradeFriendlyHeader(data) {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link><NavLink to="RecentSearches">Recent searches</NavLink></Nav.Link>
-                    <Nav.Link><NavLink to="AboutUs">About us</NavLink></Nav.Link>
                     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

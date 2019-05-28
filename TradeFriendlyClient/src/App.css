@@ -50,6 +50,9 @@ body {
   max-width: 200px;
 }
 
+.loginoption {
+  margin-top: 50px;
+}
 /* BODY */
 
 /* MESSAGE ACCUEIL */
@@ -93,9 +96,10 @@ width: 200px;
   text-align: left;
   margin-bottom: 10%;
   padding-top: 4%;
+  padding-bottom: 4%;
   border-radius: 25px;
   background: #7D95A4;
-
+  width: 100%;
 
 }
 

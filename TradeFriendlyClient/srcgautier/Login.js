@@ -5,7 +5,7 @@ import logo from './Logo.png';
 import SteamCo from './steam-icon.png';
 import App from './App';
 import './App.css';
-import { TradeFriendlyFooter } from './Footer';
+import { TradeFriendlyFooter } from '../src/Footer';
 import { TradeFriendlyHeader } from './Header'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
