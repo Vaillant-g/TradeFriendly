@@ -4,7 +4,7 @@
   "description": "serv",
   "main": "TfApp.js",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "get-steam-inventory": "^1.1.2",
